@@ -15,16 +15,17 @@
    See the License for the specific language governing permissions and
    limitations under the License.
 -->
+<!--suppress MavenModelInspection -->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-  <parent>
-    <groupId>org.apache.commons</groupId>
-    <artifactId>commons-parent</artifactId>
-    <version>46</version>
-  </parent>
+    <parent>
+        <groupId>com.jwebmp</groupId>
+        <artifactId>jwebmp-parent</artifactId>
+        <version>0.0.0_0-SNAPSHOT</version>
+    </parent>
+
   <modelVersion>4.0.0</modelVersion>
-  <groupId>commons-io</groupId>
   <artifactId>commons-io</artifactId>
-  <version>2.7-SNAPSHOT</version>
+
   <name>Apache Commons IO</name>
 
   <inceptionYear>2002</inceptionYear>
@@ -235,8 +236,6 @@ file comparators, endian transformation classes, and much more.
   </dependencies>
 
   <properties>
-    <maven.compiler.source>1.7</maven.compiler.source>
-    <maven.compiler.target>1.7</maven.compiler.target>
     <commons.componentid>io</commons.componentid>
     <commons.module.name>org.apache.commons.io</commons.module.name>
     <commons.rc.version>RC1</commons.rc.version>
@@ -381,50 +380,7 @@ file comparators, endian transformation classes, and much more.
   </reporting>
   <profiles>
     <profile>
-      <id>setup-checkout</id>
-      <activation>
-        <file>
-          <missing>site-content</missing>
-        </file>
-      </activation>
-      <build>
-        <plugins>
-          <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-antrun-plugin</artifactId>
-            <executions>
-              <execution>
-                <id>prepare-checkout</id>
-                <phase>pre-site</phase>
-                <goals>
-                  <goal>run</goal>
-                </goals>
-                <configuration>
-                  <target>
-                    <exec executable="svn">
-                      <arg line="checkout --depth immediates ${commons.scmPubUrl} ${commons.scmPubCheckoutDirectory}" />
-                    </exec>
-
-                    <exec executable="svn">
-                      <arg line="update --set-depth exclude ${commons.scmPubCheckoutDirectory}/javadocs" />
-                    </exec>
-
-                    <pathconvert pathsep=" " property="dirs">
-                      <dirset dir="${commons.scmPubCheckoutDirectory}" includes="*" />
-                    </pathconvert>
-                    <exec executable="svn">
-                      <arg line="update --set-depth infinity ${dirs}" />
-                    </exec>
-                  </target>
-                </configuration>
-              </execution>
-            </executions>
-          </plugin>
-        </plugins>
-      </build>
-    </profile>
-    <profile>
-      <id>java9+</id>
+      <id>jdk11</id>
       <activation>
         <jdk>[9,)</jdk>
       </activation>

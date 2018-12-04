@@ -66,7 +66,7 @@ Alternatively you can pull it from the central Maven repositories:
 
 ```xml
 <dependency>
-  <groupId>commons-io</groupId>
+  <groupId>com.jwebmp</groupId>
   <artifactId>commons-io</artifactId>
   <version>2.6</version>
 </dependency>
