@@ -81,7 +81,7 @@ import org.apache.commons.io.filefilter.TrueFileFilter;
  *  }
  * </pre>
  *
- * <a name="filter"></a>
+ * <a name "filter"></a>
  * <h3>2. Filter Example</h3>
  *
  * Choosing which directories and files to process can be a key aspect
@@ -148,7 +148,7 @@ import org.apache.commons.io.filefilter.TrueFileFilter;
  * This is much simpler than the previous example, and is why it is the preferred
  * option for filtering.
  *
- * <a name="cancel"></a>
+ * <a name "cancel"></a>
  * <h3>3. Cancellation</h3>
  *
  * The DirectoryWalker contains some of the logic required for cancel processing.
@@ -181,7 +181,7 @@ import org.apache.commons.io.filefilter.TrueFileFilter;
  * The following sections provide example implementations for these two different
  * scenarios.
  *
- * <a name="external"></a>
+ * <a name "external"></a>
  * <h4>3.1 External / Multi-threaded</h4>
  *
  * This example provides a public <code>cancel()</code> method that can be
@@ -213,7 +213,7 @@ import org.apache.commons.io.filefilter.TrueFileFilter;
  *  }
  * </pre>
  *
- * <a name="internal"></a>
+ * <a name "internal"></a>
  * <h4>3.2 Internal</h4>
  *
  * This shows an example of how internal cancellation processing could be implemented.
