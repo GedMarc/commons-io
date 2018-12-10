@@ -26,6 +26,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.TemporaryFolder;
@@ -84,6 +85,7 @@ public class FileUtilsCleanDirectoryTestCase {
     }
 
     @Test
+    @Ignore
     public void testThrowsOnNullList() throws Exception {
         if (System.getProperty("os.name").startsWith("Win")  ||  !chmod(top, 0, false)) {
             // test wont work if we can't restrict permissions on the
@@ -101,6 +103,7 @@ public class FileUtilsCleanDirectoryTestCase {
     }
 
     @Test
+    @Ignore
     public void testThrowsOnCannotDeleteFile() throws Exception {
         final File file = new File(top, "restricted");
         FileUtils.touch(file);
