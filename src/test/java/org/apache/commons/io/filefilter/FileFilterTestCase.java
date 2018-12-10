@@ -43,6 +43,7 @@ import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.IOCase;
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.io.testtools.TestUtils;
+import org.junit.Ignore;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.TemporaryFolder;
@@ -940,6 +941,7 @@ public class FileFilterTestCase {
     }
 
     @Test
+    @Ignore
     public void testCanRead() throws Exception {
         final File readOnlyFile = new File(getTestDirectory(), "read-only-file1.txt");
         if (!readOnlyFile.getParentFile().exists()) {
@@ -959,6 +961,7 @@ public class FileFilterTestCase {
     }
 
     @Test
+    @Ignore
     public void testCanWrite() throws Exception {
         final File readOnlyFile = new File(getTestDirectory(), "read-only-file2.txt");
         if (!readOnlyFile.getParentFile().exists()) {
