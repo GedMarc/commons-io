@@ -951,6 +951,7 @@ public class FileFilterTestCase {
             TestUtils.generateTestData(output, 32);
         }
         readOnlyFile.setReadOnly();
+	    readOnlyFile.setWritable(false, false);
         assertFiltering(CanReadFileFilter.CAN_READ,  readOnlyFile, true);
         assertFiltering(CanReadFileFilter.CANNOT_READ,  readOnlyFile, false);
         assertFiltering(CanReadFileFilter.READ_ONLY, readOnlyFile, true);
@@ -969,6 +970,7 @@ public class FileFilterTestCase {
             TestUtils.generateTestData(output, 32);
         }
         readOnlyFile.setReadOnly();
+	    readOnlyFile.setWritable(false, false);
         assertFiltering(CanWriteFileFilter.CAN_WRITE,    getTestDirectory(), true);
         assertFiltering(CanWriteFileFilter.CANNOT_WRITE, getTestDirectory(), false);
         assertFiltering(CanWriteFileFilter.CAN_WRITE,    readOnlyFile, false);
