@@ -18,11 +18,12 @@
 <!--suppress MavenModelInspection -->
 <project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <parent>
-        <groupId>com.jwebmp</groupId>
-        <artifactId>jwebmp-builder</artifactId>
+        <groupId>com.jwebmp.jpms</groupId>
+        <artifactId>jpms-pending-modules</artifactId>
         <version>0.0.0_0-SNAPSHOT</version>
     </parent>
 
+    <groupId>com.jwebmp.jpms.commons</groupId>
     <modelVersion>4.0.0</modelVersion>
     <artifactId>commons-io</artifactId>
 
