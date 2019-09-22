@@ -68,8 +68,8 @@ Alternatively you can pull it from the central Maven repositories:
 <dependency>
   <groupId>com.jwebmp</groupId>
   <artifactId>commons-io</artifactId>
-  <version>2.6</version>
-</dependency>
+  <version>2.6</version><type>jar</type>
+            </dependency>
 ```
 
 Contributing
